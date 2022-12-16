@@ -5,18 +5,29 @@ const movies = [
     {title: 'El gato con guantes', duration: 111, categories: ['comedia', 'aventura', 'animación']},
 ]
 
-let categories=[];
+
+// CODIGO FEITO POR SANTI
+const categories=[];
 for (const movie of movies) {
-        categories.push(movie.categories);  
+        for (const categorie of movie.categories) {
+          if (!categories.includes(categorie)){
+            categories.push(categorie)
+          }
+        } 
     } 
 
-for (category of categories){
-console.log(category)
-    for (value of category){
-        console.log(value);
-      if (!category.includes(value)){
-        console.log(value);
-      }
-    }
-}
+console.log(categories);
+
+// CODIGO FEITO POR MIM
+// console.log(categories);
+
+// for (category of categories){
+// console.log(category)
+//     for (value of category){
+//         console.log(value);
+//       if (!category.includes(value)){
+//         console.log(value);
+//       }
+//     }
+// }
 
